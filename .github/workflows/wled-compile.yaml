@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32_eth' >>platformio.ini
-        echo 'build_flags = ${env:esp32_eth.build_flags} -D WLED_USE_ETHERNET -D WLED_ENABLE_MQTT -D WLED_ENABLE_WEBSOCKETS -D WLED_DISABLE_2D ${esp32.AR_build_flags}' >>platformio.ini
+        echo 'build_flags = ${env:esp32_eth.build_flags} -D WLED_ENABLE_ESPNOW -D WLED_USE_ETHERNET -D WLED_ENABLE_MQTT -D WLED_ENABLE_WEBSOCKETS -D WLED_DISABLE_2D ${esp32.AR_build_flags}' >>platformio.ini
         echo 'lib_deps = ' >>platformio.ini
         echo '  ${env:esp32_eth.lib_deps}' >>platformio.ini
         echo '  ${esp32.AR_lib_deps}' >>platformio.ini
